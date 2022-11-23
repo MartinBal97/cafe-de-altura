@@ -1,64 +1,128 @@
-:root{
+:root {
     --fuentePrincipal: Outfit;
 }
+
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
     padding: 0;
     margin: 0;
-    
+    font-family: var(--fuentePrincipal);
 }
+
 header {
     color: white;
     background-color: #2B2A2B;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: var(--fuentePrincipal);
 }
-header .titleLogo{
+
+header .titleLogo {
     display: flex;
     align-items: center;
 }
-header .logo{
+
+header .logo {
     width: 20.29px;
 }
 
 header .title {
-    font-size: 23px;
+    font-size: 23.46px;
     font-weight: 400;
     text-align: left;
     margin: 1rem 0.3rem 1rem 2rem;
 }
+
 header .navBar ul a {
     color: white;
     text-decoration: none;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
+    font-size: 14px;
 }
+
 header .contactLogin {
     display: flex;
 }
-header .contactLogin .phoneLogo{
+
+header .contactLogin .phoneLogo {
     display: flex;
     align-items: center;
 }
-header .contactLogin .phoneLogo img,header .contactLogin .phoneLogo p{
-    margin-right: 0.8rem;  
+
+header .contactLogin .phoneLogo img,
+header .contactLogin .phoneLogo p {
+    margin-right: 0.8rem;
+    font-size: 14px;
+
 }
+
 header .contactLogin .buttonLogin {
     background-color: #515051;
     border: none;
     padding: 12px 24px;
     color: white;
-    font-family: var(--fuentePrincipal);
-    font-size: 17px;
+    font-size: 14px;
     border-radius: 4px;
 }
+
 header .carrito {
     padding: 1rem;
     margin-right: 0.6rem;
+}
+
+/************************************************/
+main {
+    background-color: rgb(227, 222, 215);
+    padding: 48px 40px;
+}
+
+main .mainContainer {
+    display: flex;
+    gap: 0.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main .mainContainer .mainImage {
+    border-radius: 20px;
+}
+
+main .mainContainer .mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .mainContainer .mainContent .mainSubtitle {
+    font-size: 18px;
+    color:rgb(42, 91, 69);
+}
+
+main .mainContainer .mainContent .mainTitle {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+
+}
+
+main .mainContainer .mainContent .mainButton button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+}
+
+main .mainContainer .mainContent .mainButton .buttonMain1 {
+    background-color: rgb(31, 24, 21);
+}
+
+main .mainContainer .mainContent .mainButton .buttonMain2 {
+    background-color: rgb(42, 91, 69);
 }
