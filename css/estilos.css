@@ -85,18 +85,26 @@ main {
 main .mainContainer {
     display: flex;
     gap: 0.5rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 main .mainContainer .mainImage {
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    height: min-content;
+    margin: 0 auto;
 }
 
 main .mainContainer .mainContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 50%;
 }
+main .mainContainer .mainContent *{
+    padding: 0.5rem 0;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
 
 main .mainContainer .mainContent .mainSubtitle {
     font-size: 18px;
@@ -107,8 +115,6 @@ main .mainContainer .mainContent .mainTitle {
     font-weight: 600;
     font-size: 40px;
     line-height: 44px;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
-
 }
 
 main .mainContainer .mainContent .mainButton button {
@@ -117,12 +123,82 @@ main .mainContainer .mainContent .mainButton button {
     border-radius: 4px;
     font-size: 14px;
     color: white;
-}
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;}
 
 main .mainContainer .mainContent .mainButton .buttonMain1 {
     background-color: rgb(31, 24, 21);
+    margin-right: 0.4rem;
 }
 
 main .mainContainer .mainContent .mainButton .buttonMain2 {
     background-color: rgb(42, 91, 69);
+    margin-left: 0.4rem;
+}
+/************************************************/
+.firstSection {
+    background-image: url(../img/cafeDeFondo.jpeg);
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    margin: auto 0;
+    padding: 3rem;
+}
+
+.firstSection  .fsTitle {
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.firstSection .fsCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstSection .fsCards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 245, 243, 1);
+    border-radius: 4px;
+    width: 19.75rem;
+    height: 14.5rem;
+    margin: 1rem;
+    padding: 0.8rem;
+}
+ .fsCards .card div,.fsCards .card h3,.fsCards .card p {
+    margin: 0.5rem 0;
+ }
+
+.firstSection .card div {
+    background-color: rgba(42, 91, 69, 1);
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 20px;
+}
+/************************************************/
+.ssTitle {
+    text-align: center;
+    color: rgba(42, 91, 69, 1);
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.ssContainerCart {
+    display: flex;
+    justify-content: space-around;
+}
+.ssContainerCart .ssCart{
+    text-align: center;
+    border: 2px solid grey;
+    padding: 1.5rem;
+}
+.ssContainerCart .ssCart .add{
+    background-color: rgba(42, 91, 69, 1);
+    border-radius: 4px;
+    padding: 0.5rem;
+    color: white;
+    border: none;
+}
+.ssVerMas {
+    text-align: center;
 }
