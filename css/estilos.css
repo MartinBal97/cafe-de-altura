@@ -13,6 +13,7 @@ html {
     padding: 0;
     margin: 0;
     font-family: var(--fuentePrincipal);
+    outline: none;
 }
 
 header {
@@ -90,8 +91,6 @@ main .mainContainer {
 main .mainContainer .mainImage {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
-    height: min-content;
-    margin: 0 auto;
 }
 
 main .mainContainer .mainContent {
@@ -100,15 +99,16 @@ main .mainContainer .mainContent {
     justify-content: center;
     max-width: 50%;
 }
-main .mainContainer .mainContent *{
+
+main .mainContainer .mainContent * {
     padding: 0.5rem 0;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 
 main .mainContainer .mainContent .mainSubtitle {
     font-size: 18px;
-    color:rgb(42, 91, 69);
+    color: rgb(42, 91, 69);
 }
 
 main .mainContainer .mainContent .mainTitle {
@@ -123,7 +123,8 @@ main .mainContainer .mainContent .mainButton button {
     border-radius: 4px;
     font-size: 14px;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;}
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+}
 
 main .mainContainer .mainContent .mainButton .buttonMain1 {
     background-color: rgb(31, 24, 21);
@@ -134,6 +135,7 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     background-color: rgb(42, 91, 69);
     margin-left: 0.4rem;
 }
+
 /************************************************/
 .firstSection {
     background-image: url(../img/cafeDeFondo.jpeg);
@@ -144,17 +146,19 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     padding: 3rem;
 }
 
-.firstSection  .fsTitle {
+.firstSection .fsTitle {
     font-size: 24px;
     line-height: 28px;
     color: white;
     margin-bottom: 0.5rem;
 }
+
 .firstSection .fsCards {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .firstSection .fsCards .card {
     display: flex;
     flex-direction: column;
@@ -167,9 +171,12 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     margin: 1rem;
     padding: 0.8rem;
 }
- .fsCards .card div,.fsCards .card h3,.fsCards .card p {
+
+.fsCards .card div,
+.fsCards .card h3,
+.fsCards .card p {
     margin: 0.5rem 0;
- }
+}
 
 .firstSection .card div {
     background-color: rgba(42, 91, 69, 1);
@@ -177,28 +184,324 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     padding: 1rem;
     border-radius: 20px;
 }
+
 /************************************************/
 .ssTitle {
     text-align: center;
     color: rgba(42, 91, 69, 1);
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
+
 .ssContainerCart {
     display: flex;
     justify-content: space-around;
 }
-.ssContainerCart .ssCart{
-    text-align: center;
-    border: 2px solid grey;
-    padding: 1.5rem;
+
+.ssTitle,
+.ssContainerCart,
+.ssVerMas {
+    margin: 2rem 0;
 }
-.ssContainerCart .ssCart .add{
-    background-color: rgba(42, 91, 69, 1);
+
+.ssCart h3,
+.ssCart p {
+    margin: 1rem 0;
+}
+
+.ssContainerCart .ssCart {
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid rgba(227, 222, 215, 1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: 0.25s ease-in-out;
+}
+
+.ssContainerCart .ssCart:hover {
+    background-color: rgba(227, 222, 215, 1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ssContainerCart .ssCart .add {
+    background-color: rgba(42, 91, 69, 0.7);
     border-radius: 4px;
     padding: 0.5rem;
     color: white;
     border: none;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
 }
+
+.ssContainerCart .ssCart:hover .add {
+    background-color: rgba(42, 91, 69, 1);
+    transform: scale(1.05);
+}
+
 .ssVerMas {
     text-align: center;
+}
+
+.ssVerMas a {
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    font-size: 0.9rem;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    margin-right: 0.7rem;
+}
+
+/***************************************************/
+.thirdSection {
+    background-color: rgb(42, 91, 69);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.tsTitle,
+.tsContainerContent,
+.tsVerMas {
+    margin: 2rem 0;
+}
+
+.tsContainerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tsContent {
+    background-color: white;
+    color: black;
+    width: 65%;
+    margin: 0.7rem 0;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.tsContent hr {
+    margin: 1rem 0
+}
+
+.tsContent .pregunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pregunta h3 {
+    font-size: 18px;
+}
+
+.tsContent p {
+    text-align: left;
+}
+
+.tsText {
+    font-size: 12px;
+    color: #2B2A2B;
+}
+
+.tsVerMas a {
+    color: white;
+    margin-right: 0.7rem;
+}
+
+/***************************************************/
+.fourthSection {
+    padding: 48px 40px;
+    background-color: rgb(247, 245, 243);
+}
+
+.fourthSection .fsContainer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.fsContainer .fsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.fsContainer .fsContent * {
+    padding: 0.5rem 0;
+}
+
+.fsContainer .fsContent .fsSubtitle {
+    font-size: 18px;
+    color: rgb(42, 91, 69);
+}
+
+.fsContainer .fsContent .fsTitle {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+}
+
+.fsVerMas {
+    display: flex;
+    align-items: center;
+}
+
+.fsVerMas a {
+    color: black;
+    margin-right: 0.8rem;
+}
+
+/***************************************************/
+.fifthSection {
+    display: flex;
+    background-color: rgb(227, 222, 215);
+    justify-content: space-between;
+}
+
+.contactContainer {
+    margin: auto 2.5rem;
+    color: #6B7280;
+}
+
+.contactContainer h3 {
+    color: rgb(17, 24, 39);
+}
+
+.contactContainer p {
+    margin: 1rem 0;
+}
+
+.contactContainer .contactNumEmail {
+    display: flex;
+    align-items: center;
+}
+
+.contactContainer .contactNumEmail img {
+    margin-right: 1rem;
+}
+
+.contactContainer .contactNumEmail a {
+    color: black;
+}
+
+form input,
+form textarea {
+    width: 100%;
+}
+
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    padding: 2rem;
+    width: 588px;
+}
+
+form .contLabelInput input,
+form textarea {
+    border: 1px solid rgba(209, 213, 219, 1);
+    padding: 9px 13px;
+    border-radius: 6px;
+}
+
+form .contLabelInput input:hover,
+form textarea:hover {
+    border: 1px solid rgba(155, 158, 163, 1);
+}
+
+form .contLabelInput input:focus,
+form textarea:focus {
+    border: 2px solid rgba(63, 143, 107, 1);
+    transition: 0.2s ease-in-out;
+}
+
+form label {
+    color: rgb(55, 65, 81);
+    font-size: 0.8rem;
+}
+
+.phoneOptions {
+    display: flex;
+    flex-direction: row;
+}
+
+form div,
+form textarea,
+form button {
+    margin: 1rem 0.5rem;
+}
+
+form .terms {
+    display: inline-block;
+    font-size: 14px;
+}
+
+/**************************************************/
+footer {
+    background-color: rgb(31, 24, 21);
+    color: rgba(255, 255, 255, 1);
+    padding: 1.5rem 2.5rem;
+}
+
+.footTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footContainer {
+    display: flex;
+}
+
+.footContact div {
+    display: flex;
+    align-items: center;
+    background-color: rgb(81, 80, 81);
+    padding: 12px 24px;
+    width: fit-content;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+.footContact div p {
+    font-size: 14px;
+    margin-left: 1rem;
+}
+.footContact {
+    width: 50%;
+}
+
+.navigationsFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 50%
+}
+
+.footNavigation,
+.footTerms {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.footNavigation a,
+.footTerms a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+
+
+
+.footCopyright {
+    background-color: rgba(43, 42, 43, 1);
+    color: rgba(255, 255, 255, 1);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footCopyright p {
+    font-size: 0.9rem;
 }
