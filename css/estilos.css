@@ -1,5 +1,8 @@
 :root {
     --fuentePrincipal: Outfit;
+    --parrafoTamaño: 14px;
+    --borderRadiusButton: 4px;
+    --textShadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 html {
@@ -16,6 +19,14 @@ html {
     outline: none;
 }
 
+p, a {
+    font-size: var(--parrafoTamaño)
+}
+button {
+    border-radius: var(--borderRadiusButton);
+    padding: 12px 24px !important;
+}
+/*********************************************/
 header {
     color: white;
     background-color: #2B2A2B;
@@ -44,7 +55,6 @@ header .navBar ul a {
     color: white;
     text-decoration: none;
     margin: 0 0.5rem;
-    font-size: 14px;
 }
 
 header .contactLogin {
@@ -59,17 +69,13 @@ header .contactLogin .phoneLogo {
 header .contactLogin .phoneLogo img,
 header .contactLogin .phoneLogo p {
     margin-right: 0.8rem;
-    font-size: 14px;
-
 }
 
 header .contactLogin .buttonLogin {
     background-color: #515051;
     border: none;
-    padding: 12px 24px;
     color: white;
-    font-size: 14px;
-    border-radius: 4px;
+    border-radius: var(--borderRadiusButton);
 }
 
 header .carrito {
@@ -91,6 +97,7 @@ main .mainContainer {
 main .mainContainer .mainImage {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    margin: 0 auto;
 }
 
 main .mainContainer .mainContent {
@@ -102,7 +109,7 @@ main .mainContainer .mainContent {
 
 main .mainContainer .mainContent * {
     padding: 0.5rem 0;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--textShadow);
 }
 
 
@@ -118,10 +125,7 @@ main .mainContainer .mainContent .mainTitle {
 }
 
 main .mainContainer .mainContent .mainButton button {
-    padding: 12px 24px;
     border: none;
-    border-radius: 4px;
-    font-size: 14px;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
 }
@@ -147,7 +151,7 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
 }
 
 .firstSection .fsTitle {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 28px;
     color: white;
     margin-bottom: 0.5rem;
@@ -165,13 +169,15 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     justify-content: center;
     align-items: center;
     background-color: rgba(247, 245, 243, 1);
-    border-radius: 4px;
+    border-radius: 8px;
     width: 19.75rem;
     height: 14.5rem;
     margin: 1rem;
     padding: 0.8rem;
 }
-
+.card h3 {
+    font-weight: 600;
+}
 .fsCards .card div,
 .fsCards .card h3,
 .fsCards .card p {
@@ -189,7 +195,7 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
 .ssTitle {
     text-align: center;
     color: rgba(42, 91, 69, 1);
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--textShadow);
 }
 
 .ssContainerCart {
@@ -212,6 +218,7 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     text-align: center;
     padding: 1.5rem;
     border: 1px solid rgba(227, 222, 215, 1);
+    border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transition: 0.25s ease-in-out;
 }
@@ -223,7 +230,6 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
 
 .ssContainerCart .ssCart .add {
     background-color: rgba(42, 91, 69, 0.7);
-    border-radius: 4px;
     padding: 0.5rem;
     color: white;
     border: none;
@@ -244,7 +250,7 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     text-align: center;
     color: rgba(0, 0, 0, 1);
     font-size: 0.9rem;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--textShadow);
     margin-right: 0.7rem;
 }
 
@@ -323,6 +329,10 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     max-width: 50%;
 }
 
+.fsContainer .fsImage {
+    margin: 0 auto;
+}
+
 .fsContainer .fsContent * {
     padding: 0.5rem 0;
 }
@@ -381,17 +391,17 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     color: black;
 }
 
-form input,
-form textarea {
-    width: 100%;
+.contLabelInput {
+    display: flex;
+    flex-direction: column;
 }
 
 form {
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin-right: 2rem;
-    padding: 2rem;
+    margin-right: 3rem;
+    padding: 2rem 2rem 0 2rem;
     width: 588px;
 }
 
@@ -419,21 +429,58 @@ form label {
 }
 
 .phoneOptions {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+}
+
+.phoneOptions input {
+    display: inline-block;
+}
+
+.phoneOptions select {
+    height: 100%;
+    border: 1px solid rgba(209, 213, 219, 1);
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.phoneOptions select:hover {
+    border: 1px solid rgba(155, 158, 163, 1);
+}
+
+.phoneOptions select:focus {
+    border: 2px solid rgba(63, 143, 107, 1);
+    transition: 0.2s ease-in-out;
 }
 
 form div,
 form textarea,
 form button {
-    margin: 1rem 0.5rem;
+    margin: 0.8rem 0.4rem;
 }
 
 form .terms {
-    display: inline-block;
-    font-size: 14px;
+    display: flex;
+    color: rgb(55, 65, 81);
 }
 
+form .terms input {
+    margin-right: 0.5rem;
+}
+
+form .terms a {
+    cursor: pointer;
+    color: rgb(55, 65, 81);
+}
+
+.formSubmit {
+    background-color: rgba(42, 91, 69, 1);
+    border: none;
+    color: white;
+    margin-bottom: 0.5rem;
+}
 /**************************************************/
 footer {
     background-color: rgb(31, 24, 21);
@@ -444,7 +491,11 @@ footer {
 .footTitle {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footTitle h2 {
+    margin-right: 0.5rem;
 }
 
 .footContainer {
@@ -460,10 +511,11 @@ footer {
     border-radius: 4px;
     margin: 1rem 0;
 }
+
 .footContact div p {
-    font-size: 14px;
     margin-left: 1rem;
 }
+
 .footContact {
     width: 50%;
 }
@@ -487,11 +539,7 @@ footer {
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     margin-bottom: 1rem;
-    font-size: 14px;
 }
-
-
-
 
 .footCopyright {
     background-color: rgba(43, 42, 43, 1);
