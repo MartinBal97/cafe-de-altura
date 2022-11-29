@@ -19,13 +19,22 @@ html {
     outline: none;
 }
 
-p, a {
+p,
+a {
     font-size: var(--parrafoTamaño)
 }
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 button {
     border-radius: var(--borderRadiusButton);
     padding: 12px 24px !important;
+    cursor: pointer;
 }
+
 /*********************************************/
 header {
     color: white;
@@ -34,7 +43,10 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+header a {
+    color: white;
+    cursor: pointer;
+}
 header .titleLogo {
     display: flex;
     align-items: center;
@@ -175,9 +187,11 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     margin: 1rem;
     padding: 0.8rem;
 }
+
 .card h3 {
     font-weight: 600;
 }
+
 .fsCards .card div,
 .fsCards .card h3,
 .fsCards .card p {
@@ -201,12 +215,13 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
 .ssContainerCart {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .ssTitle,
 .ssContainerCart,
 .ssVerMas {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 .ssCart h3,
@@ -221,6 +236,7 @@ main .mainContainer .mainContent .mainButton .buttonMain2 {
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transition: 0.25s ease-in-out;
+    margin: 1.2rem;
 }
 
 .ssContainerCart .ssCart:hover {
@@ -481,7 +497,7 @@ form .terms a {
     color: white;
     margin-bottom: 0.5rem;
 }
-/**************************************************/
+
 footer {
     background-color: rgb(31, 24, 21);
     color: rgba(255, 255, 255, 1);
@@ -553,3 +569,23 @@ footer {
 .footCopyright p {
     font-size: 0.9rem;
 }
+
+/************************************************/
+/**TIENDA**/
+.titleTienda {
+    text-shadow: none;
+} 
+.agotadoTienda {
+    opacity: 0.4;
+}
+header .navCarrito {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+header .navCarrito p {
+    background-color: rgba(247, 245, 243, 0.1);
+    padding: 0.5rem 0.75rem;
+    border-radius: 50%;
+}
+/*************************************************/
