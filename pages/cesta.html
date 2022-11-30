@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Martin Balverde">
+    <title>Café de altura</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/cafecito.png">
+</head>
+
+<body class="bodyCesta">
+    <header>
+        <a href="../index.html">
+            <div class="titleLogo">
+                <h1 class="title">cafedealtura.com </h1>
+                <div>
+                    <img src="../img/cafecito.png" alt="logoCafe" class="logo">
+                </div>
+            </div>
+        </a>
+        <div></div>
+        <nav class="navBar"></nav>
+        <div class="contactLogin">
+            <div class="phoneLogo">
+                <div>
+                    <img src="../img/telefono.png" alt="telefono">
+                </div>
+                <p>+34 919 49 05 18</p>
+            </div>
+            <button class="buttonLogin">Iniciar sesión</button>
+        </div>
+        <div class="navCarrito">
+            <a href="./cesta.html">
+                <img src="../img/carrito.png" alt="carrito" class="carrito">
+                <p>2</p>
+            </a>
+        </div>
+    </header>
+
+    <section class="cesta">
+        <h2 class="cestaTitle">Cesta (2)</h2>
+
+        <div class="containerCesta">
+            <div class="contProdEnvioAndTipoEnvio">
+                <div class="prodEnvio">
+                    <h3>Productos</h3>
+                    <div class="resumenCesta">
+                        <div class="joinDivs">
+                            <div class="moreLess">
+                                <p class="btn">-</p>
+                                <p class="cantidadCesta">1</p>
+                                <p class="btn">+</p>
+                            </div>
+
+                            <div class="productDetail">
+                                <img src="../img/bolsaColombia.png" alt="">
+                                <div>
+                                    <p class="bagsNames">Colombia Los Naranjos</p>
+                                    <p>Paquete de café, 250 gr</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="priceResumen negritas">9,00 €</p>
+
+                    </div>
+
+                    <hr>
+                    <div class="resumenCesta">
+                        <div class="joinDivs">
+                            <div class="moreLess">
+                                <p class="btn">-</p>
+                                <p class="cantidadCesta">1</p>
+                                <p class="btn">+</button>
+                            </div>
+                            <div class="productDetail">
+                                <img src="../img/bolsaColombia.png" alt="">
+                                <div>
+                                    <p class="bagsNames">Colombia La Casita</p>
+                                    <p>Paquete de café, 250 gr</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="priceResumen negritas">9,00 €</p>
+                    </div>
+                </div>
+
+                <div class="containerTipoEnvio">
+                    <h3>Seleccionar envío</h3>
+                    <div class="contOpcionEnvio">
+                        <div class="joinDivs">
+                            <input type="radio" name="demoraEnvio" id="">
+                            <div class="tipoEnvio">
+                                <p>Envío 5-7 días</p>
+                                <p>Opción estándar sin seguimiento</p>
+                            </div>
+                        </div>
+                        <p class="priceResumen negritas">GRATIS</p>
+                    </div>
+                    <hr>
+                    <div class="contOpcionEnvio">
+                        <div class="joinDivs">
+                            <input type="radio" name="demoraEnvio" id="">
+                            <div class="tipoEnvio">
+                                <p>Envío urgente 24h </p>
+                                <p>Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes de las 13:00).
+                                </p>
+                            </div>
+                        </div>
+                        <p class="priceResumen negritas">9,00 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="totalCesta">
+                <h3 class="negritas">Total del carrito</h3>
+                <hr>
+                <div>
+                    <div class="totCestaPrecios">
+                        <p>SUBTOTAL</p>
+                        <p class="negritas">18,00 €</p>
+                    </div>
+                    <div class="totCestaPrecios">
+                        <p>ENVÍO</p>
+                        <p class="negritas">GRATIS</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <div class="totCestaPrecios">
+                        <p class="negritas">TOTAL</p>
+                        <p class="negritas">18,00 €</p>
+                    </div>
+                    <div class="totCestaPrecios">
+                        <p></p>
+                        <p class="ivaDetail">Incluye 3,78€ de IVA</p>
+                    </div>
+                </div>
+                <div class="totalCestaButtons">
+                    <button class="btnCheckout">Ir a checkout</button>
+                    <a href="../pages/shop.html"><button class="btnSeguir">Seguir comprando</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyRightsCesta footCopyright">
+        <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
+    </div>
+</body>
+
+</html>
