@@ -1,6 +1,7 @@
 const carrito = JSON.parse(localStorage.getItem('carrito'))
-
 const prodEnvio = document.querySelector(".prodEnvio")
+const quantityProducts = document.querySelectorAll(".quantityProducts")
+console.log(quantityProducts);
 
 if (localStorage.length == 0) {
     prodEnvio.innerHTML += `<p style="padding:2rem 2rem; background-color:#f4f4f4">NO HAY PRODUCTOS TODAVIA</p>`
@@ -27,5 +28,6 @@ if (localStorage.length == 0) {
                         </div>
                         <hr>`
     })
+    quantityProducts.forEach((quantityProduct)=>quantityProduct.innerText =carrito.length)
     prodEnvio.lastChild.remove();
 }
