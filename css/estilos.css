@@ -6,7 +6,6 @@
 }
 
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -103,35 +102,35 @@ main {
   padding: 48px 40px;
 }
 
-main .mainContainer {
+.mainContainer {
   display: flex;
   gap: 0.5rem;
 }
 
-main .mainContainer .mainImage {
+.mainContainer .mainImage {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
   margin: 0 auto;
 }
 
-main .mainContainer .mainContent {
+.mainContainer .mainContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 50%;
 }
 
-main .mainContainer .mainContent * {
+.mainContainer .mainContent * {
   padding: 0.5rem 0;
   text-shadow: var(--textShadow);
 }
 
-main .mainContainer .mainContent .mainSubtitle {
+.mainContainer .mainContent .mainSubtitle {
   font-size: 18px;
   color: rgb(42, 91, 69);
 }
 
-main .mainContainer .mainContent .mainTitle {
+.mainContainer .mainContent .mainTitle {
   font-weight: 600;
   font-size: 40px;
   line-height: 44px;
@@ -143,12 +142,12 @@ main .mainContainer .mainContent .mainButton button {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
 }
 
-main .mainContainer .mainContent .mainButton .buttonMain1 {
+.mainContainer .mainContent .mainButton .buttonMain1 {
   background-color: rgb(31, 24, 21);
   margin-right: 0.4rem;
 }
 
-main .mainContainer .mainContent .mainButton .buttonMain2 {
+.mainContainer .mainContent .mainButton .buttonMain2 {
   background-color: rgb(42, 91, 69);
   margin-left: 0.4rem;
 }
@@ -703,3 +702,11 @@ header .navCarrito a p {
 }
 
 /*************************************************/
+/*JS*/
+.showContent {
+  display: none;
+}
+.rotate{
+  transform: rotate(180deg);
+}
+/*JS*/

@@ -24,7 +24,7 @@
                 </div>
             </div>
         </a>
-        <div></div>
+        <div style="width: 300px;"></div>
         <nav class="navBar"></nav>
         <div class="contactLogin">
             <div class="phoneLogo">
@@ -50,7 +50,7 @@
             <div class="contProdEnvioAndTipoEnvio">
                 <div class="prodEnvio">
                     <h3>Productos</h3>
-                    <div class="resumenCesta">
+                  <!--  <div class="resumenCesta">
                         <div class="joinDivs">
                             <div class="moreLess">
                                 <p class="btn">-</p>
@@ -67,10 +67,9 @@
                             </div>
                         </div>
                         <p class="priceResumen negritas">9,00 €</p>
-
                     </div>
 
-                    <hr>
+                     <hr>
                     <div class="resumenCesta">
                         <div class="joinDivs">
                             <div class="moreLess">
@@ -87,8 +86,10 @@
                             </div>
                         </div>
                         <p class="priceResumen negritas">9,00 €</p>
-                    </div>
+                    </div> -->
+                    
                 </div>
+                
 
                 <div class="containerTipoEnvio">
                     <h3>Seleccionar envío</h3>
@@ -108,11 +109,11 @@
                             <input type="radio" name="demoraEnvio" id="">
                             <div class="tipoEnvio">
                                 <p>Envío urgente 24h </p>
-                                <p>Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes de las 13:00).
+                                <p>Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes de <br> las 13:00).
                                 </p>
                             </div>
                         </div>
-                        <p class="priceResumen negritas">9,00 €</p>
+                        <p class="priceResumen negritas">9 €</p>
                     </div>
                 </div>
             </div>
@@ -123,18 +124,18 @@
                 <div>
                     <div class="totCestaPrecios">
                         <p>SUBTOTAL</p>
-                        <p class="negritas">18,00 €</p>
+                        <p class="totCestaSubtotal negritas">18,00 €</p>
                     </div>
                     <div class="totCestaPrecios">
                         <p>ENVÍO</p>
-                        <p class="negritas">GRATIS</p>
+                        <p class="envioPrice negritas">GRATIS</p>
                     </div>
                 </div>
                 <hr>
                 <div>
                     <div class="totCestaPrecios">
                         <p class="negritas">TOTAL</p>
-                        <p class="negritas">18,00 €</p>
+                        <p class="totCestaTotal negritas">18,00 €</p>
                     </div>
                     <div class="totCestaPrecios">
                         <p></p>
@@ -152,6 +153,7 @@
     <div class="copyRightsCesta footCopyright">
         <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
     </div>
+    <script src="../js/cesta.js"></script>
 </body>
 
 </html>
