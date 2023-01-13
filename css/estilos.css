@@ -593,6 +593,9 @@ header .navCarrito a p {
 
 /*************************************************/
 /**CESTA**/
+.cesta {
+  margin-bottom:3rem ;
+}
 .cestaTitle {
   text-align: center;
   color: rgb(42, 91, 69);
@@ -655,9 +658,7 @@ header .navCarrito a p {
 .containerTipoEnvio .contOpcionEnvio input {
   margin: 0.5rem 1.5rem 0.5rem 0.5rem;
 }
-.priceResumen {
-  font-size: 18px;
-}
+
 
 /*TOTAL CESTA*/
 .totalCesta {
@@ -697,7 +698,7 @@ header .navCarrito a p {
 }
 .copyRightsCesta {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
