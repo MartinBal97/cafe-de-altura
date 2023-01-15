@@ -650,6 +650,9 @@ header .navCarrito a p {
   font-size: 16px;
 }
 /*CONTAINER TIPO ENVIO*/
+.containerTipoEnvio{
+  margin-top: 1rem;
+}
 .containerTipoEnvio .contOpcionEnvio {
   display: flex;
   justify-content: space-between;
@@ -711,3 +714,4 @@ header .navCarrito a p {
   transform: rotate(180deg);
 }
 /*JS*/
+

@@ -28,7 +28,7 @@ cafecitos.forEach((e) => {
             <div id="${e.id}" class="ssCart">
                 <img src="${e.img}" alt="${e.name}" />
                 <h3>${e.name}</h3>
-                <p>€ ${e.price}</p>
+                <p>€ ${e.price},00 €</p>
                 <button ${e.isDisabled} class="add">Añadir</button>
             </div>`;
 });
@@ -42,13 +42,12 @@ botonesAñadir.forEach((botonAñadir, i) => {
 
     if (carrito.find((element) => element.name === cafecitos[i].name)) {
       carrito[k].quantity++;
-      localStorage.setItem("carrito", JSON.stringify(carrito));
     } else {
       carrito.push(cafecitos[i]);
       carrito.sort((a, b) => a.id - b.id);
-      localStorage.setItem("carrito", JSON.stringify(carrito));
     }
-
+    
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     sumaCantProductos(carrito);
   });
 });

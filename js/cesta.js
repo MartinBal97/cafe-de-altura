@@ -11,14 +11,10 @@ const sumaCantProductos = (carrito) => {
     acc += e.quantity;
     return acc;
   }, 0);
-
   return cantProducts;
 };
 
-
-quantityProducts.forEach((quantityProduct) => {
-  quantityProduct.innerText = sumaCantProductos(carrito);
-});
+quantityProducts.forEach(quantityProduct => quantityProduct.innerText = sumaCantProductos(carrito));
 
 // FUNCION QUE RETORNA EL PRECIO DE LA CANTIDAD DE PRODUCTOS DE LA CESTA
 const precioTotalSoloProductos = (carrito) => {
@@ -55,12 +51,13 @@ if (carrito.length == 0) {
                                     </div>
                                 </div>
                             </div>
-                            <p class="priceResumen negritas"><span class="priceResumenSpan">${e.price * e.quantity}</span> €</p>
+                            <p class="priceResumen negritas"><span class="priceResumenSpan">${e.price * e.quantity},00 €</span></p>
                         </div>
                         <hr>`;
   });
-  //prodEnvio.lastChild.remove();
 }
+prodEnvio.lastChild.style="display: none"
+
 
 const btnContadores = document.querySelectorAll(".btn");
 let tipoEnvio = document.querySelector('input[name="demoraEnvio"]:checked');
@@ -70,25 +67,18 @@ btnContadores.forEach((btnContador, i) => {
   btnContador.addEventListener("click", () => {
     // ESTE CONDICIONAL TOMA LOS BOTONES DE INDICE PAR LOS CUALES SON LOS QUE RESTAN Y EL ELSE LOS QUE SUMAN
     
-    
     if (i % 2 == 0) {
-
       btnContador.nextElementSibling.innerText--;
       
       let nameProd = btnContador.parentNode.nextElementSibling.children[1].children[0].innerText
       let k = carrito.findIndex( elements => elements.name === nameProd)
        
       carrito[k].quantity--
-      localStorage.setItem('carrito', JSON.stringify(carrito))
       
       subtotal.innerText = `${precioTotalSoloProductos(carrito)},00 €`;
       total.innerText = `${precioTotalSoloProductos(carrito)},00 €`;
-
-      quantityProducts.forEach((quantityProduct) => {
-        quantityProduct.innerText = sumaCantProductos(carrito);
-      });
-      
-      btnContador.parentNode.parentNode.parentNode.children[1].children[0].innerText  =`${carrito[k].price * carrito[k].quantity}`
+      quantityProducts.forEach(quantityProduct => {quantityProduct.innerText = sumaCantProductos(carrito)});
+      btnContador.parentNode.parentNode.parentNode.children[1].children[0].innerText  =`${carrito[k].price * carrito[k].quantity},00 €`
       
       // SI EL CONTADORE LLEGA A 0...
       if (carrito[k].quantity <= 0) {
@@ -96,38 +86,29 @@ btnContadores.forEach((btnContador, i) => {
         btnContador.parentNode.parentNode.parentNode.remove();
         
         carrito.splice(k,1)
+        
         if (carrito.length == 0) {
           prodEnvio.innerHTML += `<p style="margin:1rem 0;padding:2rem 2rem; background-color:#f4f4f4">NO HAY PRODUCTOS TODAVIA</p>`;
         }
 
-        // const filterCarrito = carrito.filter(
-        //   (n) => n.id != btnContador.parentNode.id
-        // );
-        localStorage.setItem("carrito", JSON.stringify(carrito));
         subtotal.innerText = `${precioTotalSoloProductos(carrito)},00 €`;
         total.innerText = `${precioTotalSoloProductos(carrito)},00 €`;
       }
 
     } else {
-
       btnContador.previousElementSibling.innerText++;
       
       let nameProd = btnContador.parentNode.nextElementSibling.children[1].children[0].innerText
       let k = carrito.findIndex( elements => elements.name === nameProd)
        
       carrito[k].quantity++
-      localStorage.setItem('carrito', JSON.stringify(carrito))
       
       subtotal.innerText = `${precioTotalSoloProductos(carrito)},00 €`;
       total.innerText = `${precioTotalSoloProductos(carrito)},00 €`;
-
-      quantityProducts.forEach((quantityProduct) => {
-        quantityProduct.innerText = sumaCantProductos(carrito);
-      });
-      
-      btnContador.parentNode.parentNode.parentNode.children[1].children[0].innerText  =`${carrito[k].price * carrito[k].quantity}`
-
+      quantityProducts.forEach(quantityProduct => {quantityProduct.innerText = sumaCantProductos(carrito)});
+      btnContador.parentNode.parentNode.parentNode.children[1].children[0].innerText  =`${carrito[k].price * carrito[k].quantity},00 €`
     }
+    localStorage.setItem('carrito', JSON.stringify(carrito))
   });
 });
 
@@ -135,7 +116,7 @@ const inputsEnvios = document.querySelectorAll(".change");
 const envioPrice = document.querySelector(".envioPrice");
 const cantProducts = document.querySelectorAll(".cantProd");
 
-inputsEnvios.forEach((inputEnvios, i) => {
+inputsEnvios.forEach((inputEnvios) => {
   inputEnvios.addEventListener("change", (e) => {
     if (e.target.value == "9") {
       envioPrice.innerText = 9 + ",00 €";
