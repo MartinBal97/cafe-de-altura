@@ -10,6 +10,7 @@ const cafecitos = [
 ]
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
 const quantityProduct = document.querySelector(".quantityProducts");
 
 const sumaCantProductos = (carrito) => {
@@ -39,6 +40,7 @@ botonesAñadir.forEach((botonAñadir, i) => {
   botonAñadir.addEventListener("click", () => {
     
     let k = carrito.findIndex((elements) => elements.name === cafecitos[i].name);
+    console.log(k);
 
     if (carrito.find((element) => element.name === cafecitos[i].name)) {
       carrito[k].quantity++;

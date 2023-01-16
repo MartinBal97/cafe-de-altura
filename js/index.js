@@ -43,7 +43,6 @@ botonesAñadir.forEach((botonAñadir, i) => {
       carrito.push(cafecitos[i]);
       carrito.sort((a, b) => a.id - b.id);
     }
-    
     //SETEAMOS LOCALSTORAGE Y ACTUALIZAMOS LA CANTIDAD EN EL CONTADOR DE LA CESTA
     localStorage.setItem("carrito", JSON.stringify(carrito));
     sumaCantProductos(carrito);

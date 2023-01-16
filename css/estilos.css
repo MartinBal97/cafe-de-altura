@@ -7,6 +7,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -421,8 +422,7 @@ form {
   width: 588px;
 }
 
-form .contLabelInput input,
-form textarea {
+form .contLabelInput input, form textarea {
   border: 1px solid rgba(209, 213, 219, 1);
   padding: 9px 13px;
   border-radius: 6px;
@@ -445,17 +445,15 @@ form label {
 }
 
 .phoneOptions {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .phoneOptions input {
-  display: inline-block;
+  width: 100%;
 }
 
 .phoneOptions select {
-  height: 100%;
   border: 1px solid rgba(209, 213, 219, 1);
   padding: 8px 10px;
   border-radius: 6px;
@@ -714,4 +712,11 @@ header .navCarrito a p {
   transform: rotate(180deg);
 }
 /*JS*/
+hr {
+  opacity: 0.3;
+}
+
+hr:last-child {
+  display: none;
+}
 
